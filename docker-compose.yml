@@ -6,6 +6,8 @@ services:
     image: bacnet
     command: ["bacserv", "200001"]
     network_mode: bridge
+    ports: 
+      - "47808:47808/udp"
 
   # Pump values into server.
   # TODO: Needs more convenient Env based config
